@@ -46,5 +46,5 @@ rawData.forEach(function(ele) {
 //for each index in the articles array and append the article to the end
 // of the article section
 articles.forEach(function(a){
-  $('#articles').append(a.toHtml())
+  $('#articles').append(a.toHtml());
 });

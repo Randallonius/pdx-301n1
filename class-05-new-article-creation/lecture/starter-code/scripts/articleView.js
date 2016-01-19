@@ -68,7 +68,24 @@ articleView.initNewArticlePage = function() {
   // TODO: The new articles we create will be copy/pasted into our source data file.
   // Set up this "export" functionality. We can hide it for now, and show it once we have data to export.
 
+
+
   // TODO: Add an event handler to update the preview and the export field if any inputs change.
+  $('#new-form').on('change', 'input,textarea', function(e) {
+    articleJson =
+      {
+        title:       $('article-title').val(),
+        category:    $('article-category').val(),
+        author:      $('article-author').val(),
+        authorUrl:   $('article-author-url').val(),
+        publishedOn: $(this.publishedOn).val(),
+        body:        $('article-body').val()
+      };
+
+    var jsonText = JSON.stringify(articleJson);
+    console.log("I'm working");
+    $('#article-json').val(jsonText);
+  });
 };
 
 articleView.create = function() {
@@ -82,6 +99,7 @@ articleView.create = function() {
   // TODO: Activate the highlighting of any code blocks:
 
   // TODO: Export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
+
 };
 
 
