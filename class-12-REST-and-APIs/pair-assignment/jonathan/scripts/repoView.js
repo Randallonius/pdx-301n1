@@ -11,7 +11,7 @@
 
   // DONE: How do you want to render a single repo as html? Return your filled in HTML template.
   var render = function(repo) {
-  return  '<li><a href=' + repo.html_url + '>' + repo.name + '</a></li>'
+  return  $('<li><a href=' + repo.htmlurl + '>' + repo.name + '</a></li>');
 
   };
 
